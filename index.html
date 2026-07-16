@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Snack Hub</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="flyer">
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="hero-badge">Imported Snacks</span>
+
+        <h1>Snack Hub</h1>
+
+        <p>
+          Your favourite foreign snacks, all in one place.
+        </p>
+
+        <button class="hero-button" onclick="openGeneralWhatsApp()">
+          Order on WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <section class="products-section">
+
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Available Now</p>
+          <h2>Shop Our Snacks</h2>
+        </div>
+
+        <span class="product-count">6 products</span>
+      </div>
+
+      <div class="categories">
+        <button class="category active" onclick="filterProducts('all', this)">
+          All
+        </button>
+
+        <button class="category" onclick="filterProducts('chips', this)">
+          Chips
+        </button>
+
+        <button class="category" onclick="filterProducts('chocolate', this)">
+          Chocolate
+        </button>
+
+        <button class="category" onclick="filterProducts('cookies', this)">
+          Cookies
+        </button>
+
+        <button class="category" onclick="filterProducts('drinks', this)">
+          Drinks
+        </button>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card" data-category="chips">
+          <div class="image-wrapper">
+            <span class="product-badge">Best Seller</span>
+
+           <img
+  src="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=800"
+  alt="Takis Blue Heat"
+/>
+          </div>
+
+          <div class="product-info">
+            <h3>Takis Blue Heat</h3>
+
+            <p class="product-description">
+              Bold, spicy and extra crunchy.
+            </p>
+
+            <p class="price">GH₵60</p>
+
+            <button onclick="orderProduct('Takis Blue Heat', 60)">
+              Order
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="chocolate">
+          <div class="image-wrapper">
+            <span class="product-badge new-badge">New</span>
+
+            <img
+  src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800"
+  alt="Kinder Bueno"
+/>
+          </div>
+
+          <div class="product-info">
+            <h3>Kinder Bueno</h3>
+
+            <p class="product-description">
+              Crispy wafer with hazelnut filling.
+            </p>
+
+            <p class="price">GH₵35</p>
+
+            <button onclick="orderProduct('Kinder Bueno', 35)">
+              Order
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cookies">
+          <div class="image-wrapper">
+           <img
+  src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=800"
+  alt="Oreo Cookies"
+/>
+          </div>
+
+          <div class="product-info">
+            <h3>Oreo Cookies</h3>
+
+            <p class="product-description">
+              Chocolate cookies with creamy filling.
+            </p>
+
+            <p class="price">GH₵40</p>
+
+            <button onclick="orderProduct('Oreo Cookies', 40)">
+              Order
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="drinks">
+          <div class="image-wrapper">
+            <span class="product-badge">Popular</span>
+
+           <img
+  src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800"
+  alt="Fruit Drink"
+/>
+          </div>
+
+          <div class="product-info">
+            <h3>Fruit Drink</h3>
+
+            <p class="product-description">
+              Sweet and refreshing imported drink.
+            </p>
+
+            <p class="price">GH₵50</p>
+
+            <button onclick="orderProduct('Imported Fruit Drink', 50)">
+              Order
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="chocolate">
+          <div class="image-wrapper">
+         <img
+  src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=800"
+  alt="Hershey's Chocolate"
+/>
+          </div>
+
+          <div class="product-info">
+            <h3>Hershey's</h3>
+
+            <p class="product-description">
+              Smooth and rich milk chocolate.
+            </p>
+
+            <p class="price">GH₵45</p>
+
+            <button onclick="orderProduct('Hershey’s Chocolate', 45)">
+              Order
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="chips">
+          <div class="image-wrapper">
+            <span class="product-badge new-badge">New</span>
+
+            <img
+  src="https://images.unsplash.com/photo-1570824104453-508955ab713e?w=800"
+  alt="Doritos"
+/>
+          </div>
+
+          <div class="product-info">
+            <h3>Doritos</h3>
+
+            <p class="product-description">
+              Crunchy imported tortilla chips.
+            </p>
+
+            <p class="price">GH₵55</p>
+
+            <button onclick="orderProduct('Doritos', 55)">
+              Order
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="delivery-section">
+      <div>
+        <p class="delivery-label">Delivery Available</p>
+
+        <h2>See something you like?</h2>
+
+        <p>
+          Send us a message and place your order directly through WhatsApp.
+        </p>
+      </div>
+
+      <button onclick="openGeneralWhatsApp()">
+        Chat With Snack Hub
+      </button>
+    </section>
+
+    <footer>
+      <p>Snack Hub</p>
+      <span>Imported treats delivered to you.</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
