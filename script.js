@@ -1,4 +1,4 @@
-const whatsappNumber = "233500000000";
+const whatsappNumber = "233269914730";
 
 function orderProduct(productName, productPrice) {
   const message = `
